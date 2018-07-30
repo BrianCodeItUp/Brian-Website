@@ -2,7 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Brian1993.github.io/",
+  "homepage": "https://brian1993.github.io/Brian-Website",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/react-fontawesome": "0.1.0-11",
