@@ -1,0 +1,54 @@
+.nav-menu{
+    display: none;
+    @media screen and(max-width:600px) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right:20px;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+    }
+   
+    .nav-menu-icon{
+        width: 40px;
+        height: 1px;
+        background-color: #303030;
+        transition: all .3s;
+        position: absolute;  
+        transform: translate(-50% , -50%);
+    }
+    
+    .nav-icon-top{
+        top:30%;
+        left:50%;    
+    }
+    .nav-icon-mid{
+        top: 50%;
+        left:50%;  
+    }
+    .nav-icon-bot{
+        top: 70%;
+        left:50%;
+    }
+    .nav-icon-top-open{
+        background-color: #fff ; 
+        top: 50%;
+        left:50%;
+        transform: translate(-50% , -50%) rotate(135deg);
+    }
+    .nav-icon-mid-open{
+        background-color: #fff ; 
+        opacity: 0;
+    }
+    .nav-icon-bot-open{
+        background-color: #fff ; 
+        top: 50%;
+        left:50%;
+        transform: translate(-50% , -65%) rotate(45deg);
+    }
+    .menu_change_color{
+        background-color: #fff ; 
+    }
+}

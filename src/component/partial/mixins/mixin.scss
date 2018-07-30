@@ -1,0 +1,29 @@
+/////////////////////////////
+/////   varibles
+/////////////////////////////
+
+$color:#fff;
+$content-color: #cdd0d8;
+/////////////////////////////
+/////   mixins
+/////////////////////////////
+
+@mixin flex_center($dir:row,$justify-content:center,$align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction:$dir;
+    // justify-content: space-around
+}
+
+
+@mixin  font($size:18px , $color:#fff , $letter-space:20px) {
+    font-size: $size ;
+    color:$color;
+    letter-spacing: $letter-space;
+}
+@mixin  title-font($color:#4a4a4a) {
+    color:$color;
+    font-size: 30px;
+    font-weight: 700;
+}

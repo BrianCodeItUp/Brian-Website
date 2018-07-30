@@ -1,0 +1,132 @@
+@import '../partial/mixins/mixin.scss';
+.landpage{
+    width: 100%;
+    height: 100vh;
+    background: url('../../img/forest_01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    z-index: -1;
+    @include flex_center;
+    .landpage-content-container{
+        height: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h1{
+            @include font(70px); 
+            flex:1; 
+            font-weight: 400;
+            @media screen and(max-width:600px){
+                font-size: 30px;
+            }
+           
+        }
+        h2{
+            flex:.7;
+            @include font($size:30px);
+            @media screen and(max-width:600px){
+                font-size: 16px;
+                font-weight: 100;
+            }
+            
+        }
+        p{
+            flex: 1;
+            color:$color; 
+            font-size: 20px;
+            letter-spacing: 15px;
+            @media screen and(max-width:600px){
+                font-size: 16px;
+                font-weight: 100;
+            }
+        }
+        .landpage-content-icon-container{
+            cursor: pointer;
+            flex:1;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            .landpage-content-icon{
+                flex:10%;
+                transition: .3s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                .landpage-icon{
+                   @include font($size:35px);
+                   @media screen and(max-width:600px){
+                    font-size: 30px;
+                }
+                }
+               
+                
+            }
+        }
+       
+            
+    }
+    .landpage_scroll_line{
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        border-radius: 6px;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 90px;
+        background:rgba($color , .7); 
+         animation: move 1.5s infinite ease-in-out;
+        &::before{
+            content:"";
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            z-index:-1;
+            left:7px;
+            bottom: -2px;
+            transform: rotate(45deg);
+            background:rgba($color , .7); 
+            border-radius: 6px;
+           
+        }
+        &::after{
+            content:"";
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            z-index:-1;
+            right:7px;
+            bottom: -2px;
+            transform: rotate(135deg);
+            background:rgba($color , .7); 
+            border-radius: 6px;
+           
+        }
+    }
+    .go-to-top{
+        cursor: pointer;
+        position: fixed;
+        bottom: 5%;
+        right: 2%;
+        width:5%;
+        height:5%;
+        border-radius: 50%;
+        background: rgba(#4a4a4a,.5); 
+        @include font($letter-space:3px) ;
+        @include flex-center;
+        @media screen and (max-width:800px){
+                display: none;
+        }
+    }
+}
+@keyframes move {
+    0%{
+        opacity: 0;
+        bottom:30px
+    }
+    100%{
+        opacity: 1;
+        bottom:10px
+    }
+}

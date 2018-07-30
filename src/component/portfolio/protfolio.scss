@@ -1,0 +1,14 @@
+@import '../partial/mixins/mixin.scss';
+.portfolio{
+    .portfolio-title{   
+        @include flex-center;
+       height: 200px; 
+       width: 100%;    
+        h2{         
+            @include  title-font;        
+        }
+    }
+    .portfolio-content-container{
+        width: 100%;    
+    }
+}

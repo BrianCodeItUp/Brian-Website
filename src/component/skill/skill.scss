@@ -1,0 +1,121 @@
+@import '../partial/mixins/mixin.scss';
+
+.skill{
+    width: 100%;
+    height: 120vh;
+    background: $color;
+    @include flex_center(column ,space-around);
+    @media screen and(max-width:850px){
+        height: 250vh;
+    }
+    @media screen and(max-width:600px){
+        height: 350vh;
+    }
+    .skill-title{
+            color:#4a4a4a;
+            font-size: 30px;
+            flex: 3;
+            @include flex_center;
+            font-weight: 700;
+            @media screen and(max-width:850px){
+                flex: .8;
+            }
+    }
+}
+
+.skill-container{
+    flex: 15;
+    width: 75%;
+    display: flex;
+    @media screen and(max-width:1400px){
+        width: 95%;
+    }
+    @media screen and(max-width:850px){
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-content{
+        box-shadow: 10px 10px 2px 1px #aaa;
+        flex:1; 
+        margin: 20px; 
+        background:#4a4a4a ;
+        display: flex;
+        flex-direction: column;
+        @media screen and(max-width:850px){
+            width: 90%;
+        }
+        .skill-logo{
+                flex:3;
+                height: 130px;
+                @include flex_center(column);
+                
+                .skill-logo-wrap{  
+                    flex:2.5;
+                    @include flex_center(column);
+                    
+                    i {   
+                        // margin-top: 20px;
+                        @include  font($size:40px) ;
+                  
+                       
+                    }
+                    h2 {
+                        margin-top: 30px;
+                        @include  font;
+                        }
+                    }
+                .skill-content-mythought{
+                    flex:1;
+                    margin:0px 40px; 
+                        @include flex_center;
+                        @include  font($size:16px,$color:$content-color ,$letter-space:5px) ;
+                        line-height:2;
+                }    
+          }
+        
+
+    }
+   
+    .skill-content-language-wrap{
+        flex:1.5;
+        @include flex_center(column);
+
+        .skill-content-language-title{
+            text-align: center;
+            @include  font($size:18px ,$letter-space:5px) ;
+            font-weight: 500;
+        }
+        p{   
+            @include  font($size:15px,$color:$content-color ,$letter-space:5px) ;
+            margin-top: 20px;
+            margin:20px 30px 0 20px;
+            text-align: center;
+        }
+        
+    }
+    .skill-content-tool{
+        flex:3.5;
+        @include flex_center(column);
+        .skill-content-tool-title{
+            flex:1;
+            @include  font($size:18px ,$letter-space:5px) ;
+            @include flex_center;
+            align-items: flex-end;
+            font-weight: 500;
+         
+        }
+        .skill-content-tool-lists{
+            flex:7;
+            list-style: none;
+            @include flex_center(column,flex-start ,flex-start);
+            margin-top: 30px;
+                li{
+                    margin-bottom: 20px;
+                    @include  font($size:15px,$color:$content-color ,$letter-space:5px) ;
+                }
+                }
+          
+    }
+
+}
+

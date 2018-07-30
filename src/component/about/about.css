@@ -1,0 +1,78 @@
+.about .about-tilte-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-direction: column; }
+  .about .about-tilte-container h2 {
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    font-size: 30px;
+    font-weight: 700; }
+  .about .about-tilte-container P {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.571;
+    color: #9b9b9b;
+    padding: 0 20px;
+    text-align: center; }
+
+.about .about-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row; }
+  @media screen and (max-width: 800px) {
+    .about .about-content {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; } }
+  .about .about-content .about-content-pic {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden; }
+    @media screen and (max-width: 800px) {
+      .about .about-content .about-content-pic {
+        width: 95%;
+        flex-basis: 40%;
+        justify-content: center;
+        align-items: center; } }
+    .about .about-content .about-content-pic .pic_container {
+      flex-basis: 90%;
+      min-width: 300px; }
+      @media screen and (max-width: 800px) {
+        .about .about-content .about-content-pic .pic_container {
+          flex-basis: 90%;
+          height: 100%; } }
+      .about .about-content .about-content-pic .pic_container img {
+        width: 100%; }
+  .about .about-content .about-content-self-intro {
+    flex-basis: 50%; }
+    @media screen and (max-width: 800px) {
+      .about .about-content .about-content-self-intro {
+        flex-basis: 40%;
+        width: 90%;
+        margin-top: 20px; } }
+    .about .about-content .about-content-self-intro .self-intro-container {
+      margin: 0 50px;
+      width: 80%; }
+      @media screen and (max-width: 800px) {
+        .about .about-content .about-content-self-intro .self-intro-container {
+          width: 90%;
+          margin: 0 auto; } }
+      .about .about-content .about-content-self-intro .self-intro-container h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4a4a4a; }
+      .about .about-content .about-content-self-intro .self-intro-container p {
+        margin: 10px 0;
+        font-size: 18px;
+        line-height: 2;
+        color: #4a4a4a;
+        font-weight: 300; }
+        .about .about-content .about-content-self-intro .self-intro-container p:first-child {
+          margin-top: 0; }
